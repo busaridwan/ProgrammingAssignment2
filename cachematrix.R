@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## The  below is to make a cache matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
     inv <<- NULL
   }
   get <- function() x
-  setInverse <- function() inv <<- solve(x) #calculate the inverse
+  setInverse <- function() inv <<- solve(x) #This code calculate the inverse
   getInverse <- function() inv
   list(set = set,
        get = get,
@@ -19,10 +19,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## the below is to solve the cache
 
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    ## This return a matrix that is the inverse of 'x'
     inv <- x$getInverse()
     if (!is.null(inv)) {
         message("getting cached data")
